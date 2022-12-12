@@ -42,7 +42,8 @@ if (lengthChoice >= 8 && lengthChoice <= 128) {
     }
   // This for loop converts the answer for length choice to an integer and as it runs through adds a random value from the string possiblechars and places it in the generatedpassword empty string
   for (let i = 0; i < parseInt(lengthChoice); i++) {
-    generatedpassword += possiblechars.charAt(Math.floor(Math.random() * parseInt(lengthChoice)))
+    var randomnumber = Math.floor(Math.random() * parseInt(possiblechars.length))
+    generatedpassword += possiblechars.charAt(randomnumber)
   }
   // Returns our completed password
   return generatedpassword
